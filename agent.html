@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TFM Tool | Dashboard</title>
+    <meta name="description" content="TFM Tool Dashboard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Jquery Table CDN linked here -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"
+    />
+
+    <!-- Bootstrap5 CDN linked here -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS file linked here -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+
+    <!-- JavaScript file linked here -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="admin__dashboard d-flex">
+      <div class="sidebar flex-shrink-0">
+        <div class="sidebar-menu m-4 mb-5">
+          <div
+            class="sidebar__logo d-flex align-content-center justify-content-center mb-4"
+          >
+            <a href="">
+              <img
+                class="logo"
+                src="./public/sidebar-icons/sidebar-logo.svg"
+                alt="logo"
+              />
+            </a>
+
+            <a href="./index.html">
+              <img
+                class="frame-logo"
+                src="./public/sidebar-icons/frame-logo.svg"
+                alt="logo"
+              />
+            </a>
+          </div>
+
+          <ul class="list-unstyled d-flex flex-column gap-3">
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="./index.html"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 1.33333C4.33333 1.33333 1.33333 4.33333 1.33333 7.99999C1.33333 11.6667 4.33333 14.6667 8 14.6667C11.6667 14.6667 14.6667 11.6667 14.6667 7.99999C14.6667 4.33333 11.6667 1.33333 8 1.33333ZM7.33333 9.33333H4L7.33333 2.66666V9.33333ZM8.66667 13.3333V6.66666H12L8.66667 13.3333Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Dashboard</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="./index.html"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link link--active">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="./agent.html"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.6667 10V8.4L6.23334 6H4.66667V4.33333L9.33333 1L14 4.33333V10H12.6667ZM0.666668 14.6667V7.33333H3.33333V14.6667H0.666668ZM9.33333 14.6667L4.66667 13.35V7.33333H5.98334L11.3333 9.33333V10.6667H8.66667L7.5 10.2167L7.26667 10.8333L8.66667 11.3333H14.6667V12.6667L9.33333 14.6667ZM9.66667 5.33333H10.3333V4.66667H9.66667V5.33333ZM8.33333 5.33333H9V4.66667H8.33333V5.33333ZM9.66667 6.66667H10.3333V6H9.66667V6.66667ZM8.33333 6.66667H9V6H8.33333V6.66667Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Agent</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="./agent.html"
+                      >Agent</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="./job_history.html"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_102_137)">
+                        <path
+                          d="M15.75 7.98534C15.7579 12.2553 12.2756 15.747 8.00562 15.75C6.16141 15.7513 4.46741 15.1084 3.13619 14.034C2.79003 13.7546 2.76416 13.2358 3.07872 12.9213L3.43081 12.5692C3.69984 12.3002 4.12934 12.2707 4.42741 12.5072C5.40819 13.2855 6.64941 13.75 8 13.75C11.1783 13.75 13.75 11.1778 13.75 8C13.75 4.82172 11.1778 2.25 8 2.25C6.47456 2.25 5.08909 2.84278 4.06038 3.81037L5.64644 5.39644C5.96144 5.71144 5.73834 6.25 5.29291 6.25H0.75C0.473844 6.25 0.25 6.02616 0.25 5.75V1.20709C0.25 0.761656 0.788562 0.538562 1.10356 0.853531L2.64644 2.39641C4.03778 1.06675 5.9235 0.25 8 0.25C12.2753 0.25 15.7421 3.71187 15.75 7.98534ZM10.0965 10.4473L10.4035 10.0527C10.6578 9.72569 10.5989 9.25447 10.2719 9.00019L9 8.01091V4.75C9 4.33578 8.66422 4 8.25 4H7.75C7.33578 4 7 4.33578 7 4.75V8.98909L9.04403 10.5789C9.371 10.8332 9.84219 10.7743 10.0965 10.4473Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_102_137">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Job History</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="./job_history.html"
+                      >Job History</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="./device_sn.html"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.6 1.6C5.17565 1.6 4.76869 1.76857 4.46863 2.06863C4.16857 2.36869 4 2.77565 4 3.2V12.8C4 13.2243 4.16857 13.6313 4.46863 13.9314C4.76869 14.2314 5.17565 14.4 5.6 14.4H10.4C10.8243 14.4 11.2313 14.2314 11.5314 13.9314C11.8314 13.6313 12 13.2243 12 12.8V3.2C12 2.77565 11.8314 2.36869 11.5314 2.06863C11.2313 1.76857 10.8243 1.6 10.4 1.6H5.6ZM8 12.8C8.21217 12.8 8.41566 12.7157 8.56569 12.5657C8.71571 12.4157 8.8 12.2122 8.8 12C8.8 11.7878 8.71571 11.5843 8.56569 11.4343C8.41566 11.2843 8.21217 11.2 8 11.2C7.78783 11.2 7.58434 11.2843 7.43431 11.4343C7.28429 11.5843 7.2 11.7878 7.2 12C7.2 12.2122 7.28429 12.4157 7.43431 12.5657C7.58434 12.7157 7.78783 12.8 8 12.8Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>i Device SN</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="./device_sn.html"
+                      >i Device SN</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="./credit_history.html"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 4C0 3.46957 0.210714 2.96086 0.585786 2.58579C0.960859 2.21071 1.46957 2 2 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V5H0V4ZM0 7V12C0 12.5304 0.210714 13.0391 0.585786 13.4142C0.960859 13.7893 1.46957 14 2 14H14C14.5304 14 15.0391 13.7893 15.4142 13.4142C15.7893 13.0391 16 12.5304 16 12V7H0ZM3 9H4C4.26522 9 4.51957 9.10536 4.70711 9.29289C4.89464 9.48043 5 9.73478 5 10V11C5 11.2652 4.89464 11.5196 4.70711 11.7071C4.51957 11.8946 4.26522 12 4 12H3C2.73478 12 2.48043 11.8946 2.29289 11.7071C2.10536 11.5196 2 11.2652 2 11V10C2 9.73478 2.10536 9.48043 2.29289 9.29289C2.48043 9.10536 2.73478 9 3 9Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Credit History</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="./credit_history.html"
+                      >Credit History</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 1.33333C4.33333 1.33333 1.33333 4.33333 1.33333 7.99999C1.33333 11.6667 4.33333 14.6667 8 14.6667C11.6667 14.6667 14.6667 11.6667 14.6667 7.99999C14.6667 4.33333 11.6667 1.33333 8 1.33333ZM7.33333 9.33333H4L7.33333 2.66666V9.33333ZM8.66667 13.3333V6.66666H12L8.66667 13.3333Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Plans</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Plans</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 1.33334H6.66667C6.13624 1.33334 5.62753 1.54405 5.25245 1.91912C4.87738 2.2942 4.66667 2.8029 4.66667 3.33334V8C4.66667 8.53044 4.87738 9.03914 5.25245 9.41422C5.62753 9.78929 6.13624 10 6.66667 10H13.3333C13.8638 10 14.3725 9.78929 14.7475 9.41422C15.1226 9.03914 15.3333 8.53044 15.3333 8V3.33334C15.3333 2.8029 15.1226 2.2942 14.7475 1.91912C14.3725 1.54405 13.8638 1.33334 13.3333 1.33334ZM14 8C14 8.17681 13.9298 8.34638 13.8047 8.47141C13.6797 8.59643 13.5101 8.66667 13.3333 8.66667H6.66667C6.48986 8.66667 6.32029 8.59643 6.19526 8.47141C6.07024 8.34638 6 8.17681 6 8V3.33334C6 3.15652 6.07024 2.98696 6.19526 2.86193C6.32029 2.73691 6.48986 2.66667 6.66667 2.66667H13.3333C13.5101 2.66667 13.6797 2.73691 13.8047 2.86193C13.9298 2.98696 14 3.15652 14 3.33334V8ZM11.6667 5.33334C11.4199 5.33417 11.1822 5.42686 11 5.59334C10.8566 5.46304 10.6785 5.37718 10.4873 5.3462C10.2961 5.31523 10.1 5.34046 9.9228 5.41884C9.74564 5.49722 9.59506 5.62537 9.48936 5.78771C9.38366 5.95006 9.32739 6.13961 9.32739 6.33334C9.32739 6.52706 9.38366 6.71661 9.48936 6.87896C9.59506 7.0413 9.74564 7.16945 9.9228 7.24783C10.1 7.32621 10.2961 7.35145 10.4873 7.32047C10.6785 7.28949 10.8566 7.20363 11 7.07334C11.1204 7.18275 11.2657 7.26115 11.4232 7.30172C11.5807 7.34229 11.7458 7.34382 11.9041 7.30616C12.0623 7.2685 12.209 7.1928 12.3314 7.08561C12.4538 6.97843 12.5482 6.84301 12.6064 6.6911C12.6646 6.53918 12.6849 6.37536 12.6654 6.21384C12.646 6.05232 12.5874 5.89799 12.4949 5.76422C12.4023 5.63045 12.2784 5.52128 12.1341 5.4462C11.9898 5.37111 11.8293 5.33237 11.6667 5.33334ZM10.6667 11.3333C10.4899 11.3333 10.3203 11.4036 10.1953 11.5286C10.0702 11.6536 10 11.8232 10 12V12.6667C10 12.8435 9.92976 13.013 9.80474 13.1381C9.67972 13.2631 9.51015 13.3333 9.33333 13.3333H2.66667C2.48986 13.3333 2.32029 13.2631 2.19526 13.1381C2.07024 13.013 2 12.8435 2 12.6667V10H2.66667C2.84348 10 3.01305 9.92976 3.13807 9.80474C3.2631 9.67972 3.33333 9.51015 3.33333 9.33334C3.33333 9.15652 3.2631 8.98696 3.13807 8.86193C3.01305 8.73691 2.84348 8.66667 2.66667 8.66667H2V8C2 7.82319 2.07024 7.65362 2.19526 7.5286C2.32029 7.40357 2.48986 7.33334 2.66667 7.33334C2.84348 7.33334 3.01305 7.2631 3.13807 7.13807C3.2631 7.01305 3.33333 6.84348 3.33333 6.66667C3.33333 6.48986 3.2631 6.32029 3.13807 6.19526C3.01305 6.07024 2.84348 6 2.66667 6C2.13623 6 1.62753 6.21072 1.25245 6.58579C0.877382 6.96086 0.666668 7.46957 0.666668 8V12.6667C0.666668 13.1971 0.877382 13.7058 1.25245 14.0809C1.62753 14.456 2.13623 14.6667 2.66667 14.6667H9.33333C9.86377 14.6667 10.3725 14.456 10.7475 14.0809C11.1226 13.7058 11.3333 13.1971 11.3333 12.6667V12C11.3333 11.8232 11.2631 11.6536 11.1381 11.5286C11.013 11.4036 10.8435 11.3333 10.6667 11.3333ZM4 12H4.66667C4.84348 12 5.01305 11.9298 5.13807 11.8047C5.2631 11.6797 5.33333 11.5101 5.33333 11.3333C5.33333 11.1565 5.2631 10.987 5.13807 10.8619C5.01305 10.7369 4.84348 10.6667 4.66667 10.6667H4C3.82319 10.6667 3.65362 10.7369 3.5286 10.8619C3.40357 10.987 3.33333 11.1565 3.33333 11.3333C3.33333 11.5101 3.40357 11.6797 3.5286 11.8047C3.65362 11.9298 3.82319 12 4 12Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Licenses</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Licenses</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_102_182)">
+                        <path
+                          d="M15.9921 5.3805L15.3211 9.22978C15.2384 9.65499 14.8996 9.91354 14.5089 9.91839H4.72677L4.53256 11.0131H13.8556C14.3465 11.0504 14.6795 11.3982 14.6855 11.843C14.6498 12.3329 14.302 12.6668 13.8556 12.6729H3.54375C2.98605 12.6227 2.65351 12.1782 2.71385 11.6841L3.15528 9.28271L2.48431 2.53764L0.577332 1.93734C0.111319 1.75231 -0.0788813 1.33074 0.0299587 0.895563C0.210932 0.44203 0.644572 0.234816 1.07173 0.34819L3.50843 1.12511C3.83669 1.24816 4.02553 1.51687 4.07345 1.8314L4.21471 3.17335L15.2681 4.40935C15.776 4.51936 16.0517 4.92164 15.9921 5.3805ZM6.0704 14.4154C6.0704 15.1151 5.5032 15.6823 4.80349 15.6823C4.1038 15.6823 3.5366 15.1151 3.5366 14.4154C3.5366 13.7157 4.10381 13.1485 4.80349 13.1485C5.50319 13.1485 6.0704 13.7157 6.0704 14.4154ZM13.6338 14.4154C13.6338 15.1151 13.0665 15.6823 12.3668 15.6823C11.6671 15.6823 11.0999 15.1151 11.0999 14.4154C11.0999 13.7157 11.6671 13.1485 12.3668 13.1485C13.0665 13.1485 13.6338 13.7157 13.6338 14.4154Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_102_182">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Orders</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Orders</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 4C0 3.46957 0.210714 2.96086 0.585786 2.58579C0.960859 2.21071 1.46957 2 2 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V5H0V4ZM0 7V12C0 12.5304 0.210714 13.0391 0.585786 13.4142C0.960859 13.7893 1.46957 14 2 14H14C14.5304 14 15.0391 13.7893 15.4142 13.4142C15.7893 13.0391 16 12.5304 16 12V7H0ZM3 9H4C4.26522 9 4.51957 9.10536 4.70711 9.29289C4.89464 9.48043 5 9.73478 5 10V11C5 11.2652 4.89464 11.5196 4.70711 11.7071C4.51957 11.8946 4.26522 12 4 12H3C2.73478 12 2.48043 11.8946 2.29289 11.7071C2.10536 11.5196 2 11.2652 2 11V10C2 9.73478 2.10536 9.48043 2.29289 9.29289C2.48043 9.10536 2.73478 9 3 9Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Recharges</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Recharges</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 1.33334H6.66667C6.13624 1.33334 5.62753 1.54405 5.25245 1.91912C4.87738 2.2942 4.66667 2.8029 4.66667 3.33334V8C4.66667 8.53044 4.87738 9.03914 5.25245 9.41422C5.62753 9.78929 6.13624 10 6.66667 10H13.3333C13.8638 10 14.3725 9.78929 14.7475 9.41422C15.1226 9.03914 15.3333 8.53044 15.3333 8V3.33334C15.3333 2.8029 15.1226 2.2942 14.7475 1.91912C14.3725 1.54405 13.8638 1.33334 13.3333 1.33334ZM14 8C14 8.17681 13.9298 8.34638 13.8047 8.47141C13.6797 8.59643 13.5101 8.66667 13.3333 8.66667H6.66667C6.48986 8.66667 6.32029 8.59643 6.19526 8.47141C6.07024 8.34638 6 8.17681 6 8V3.33334C6 3.15652 6.07024 2.98696 6.19526 2.86193C6.32029 2.73691 6.48986 2.66667 6.66667 2.66667H13.3333C13.5101 2.66667 13.6797 2.73691 13.8047 2.86193C13.9298 2.98696 14 3.15652 14 3.33334V8ZM11.6667 5.33334C11.4199 5.33417 11.1822 5.42686 11 5.59334C10.8566 5.46304 10.6785 5.37718 10.4873 5.3462C10.2961 5.31523 10.1 5.34046 9.9228 5.41884C9.74564 5.49722 9.59506 5.62537 9.48936 5.78771C9.38366 5.95006 9.32739 6.13961 9.32739 6.33334C9.32739 6.52706 9.38366 6.71661 9.48936 6.87896C9.59506 7.0413 9.74564 7.16945 9.9228 7.24783C10.1 7.32621 10.2961 7.35145 10.4873 7.32047C10.6785 7.28949 10.8566 7.20363 11 7.07334C11.1204 7.18275 11.2657 7.26115 11.4232 7.30172C11.5807 7.34229 11.7458 7.34382 11.9041 7.30616C12.0623 7.2685 12.209 7.1928 12.3314 7.08561C12.4538 6.97843 12.5482 6.84301 12.6064 6.6911C12.6646 6.53918 12.6849 6.37536 12.6654 6.21384C12.646 6.05232 12.5874 5.89799 12.4949 5.76422C12.4023 5.63045 12.2784 5.52128 12.1341 5.4462C11.9898 5.37111 11.8293 5.33237 11.6667 5.33334ZM10.6667 11.3333C10.4899 11.3333 10.3203 11.4036 10.1953 11.5286C10.0702 11.6536 10 11.8232 10 12V12.6667C10 12.8435 9.92976 13.013 9.80474 13.1381C9.67972 13.2631 9.51015 13.3333 9.33333 13.3333H2.66667C2.48986 13.3333 2.32029 13.2631 2.19526 13.1381C2.07024 13.013 2 12.8435 2 12.6667V10H2.66667C2.84348 10 3.01305 9.92976 3.13807 9.80474C3.2631 9.67972 3.33333 9.51015 3.33333 9.33334C3.33333 9.15652 3.2631 8.98696 3.13807 8.86193C3.01305 8.73691 2.84348 8.66667 2.66667 8.66667H2V8C2 7.82319 2.07024 7.65362 2.19526 7.5286C2.32029 7.40357 2.48986 7.33334 2.66667 7.33334C2.84348 7.33334 3.01305 7.2631 3.13807 7.13807C3.2631 7.01305 3.33333 6.84348 3.33333 6.66667C3.33333 6.48986 3.2631 6.32029 3.13807 6.19526C3.01305 6.07024 2.84348 6 2.66667 6C2.13623 6 1.62753 6.21072 1.25245 6.58579C0.877382 6.96086 0.666668 7.46957 0.666668 8V12.6667C0.666668 13.1971 0.877382 13.7058 1.25245 14.0809C1.62753 14.456 2.13623 14.6667 2.66667 14.6667H9.33333C9.86377 14.6667 10.3725 14.456 10.7475 14.0809C11.1226 13.7058 11.3333 13.1971 11.3333 12.6667V12C11.3333 11.8232 11.2631 11.6536 11.1381 11.5286C11.013 11.4036 10.8435 11.3333 10.6667 11.3333ZM4 12H4.66667C4.84348 12 5.01305 11.9298 5.13807 11.8047C5.2631 11.6797 5.33333 11.5101 5.33333 11.3333C5.33333 11.1565 5.2631 10.987 5.13807 10.8619C5.01305 10.7369 4.84348 10.6667 4.66667 10.6667H4C3.82319 10.6667 3.65362 10.7369 3.5286 10.8619C3.40357 10.987 3.33333 11.1565 3.33333 11.3333C3.33333 11.5101 3.40357 11.6797 3.5286 11.8047C3.65362 11.9298 3.82319 12 4 12Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Transactions</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Transactions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 7.99999L13.3333 5.33332L10 2.66666V4.66599H1.33333V5.99932H10V7.99999ZM14.6667 9.99999H6V7.99999L2.66667 10.6667L6 13.3333V11.3333H14.6667V9.99999Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Transfers</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Transfers</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_102_218)">
+                        <path
+                          d="M7.99152 0C3.57664 0.0048 0 3.58496 0 8C0.00225302 9.25313 0.298859 10.4882 0.865915 11.6057C1.43297 12.7232 2.25462 13.6918 3.26464 14.4336C3.22224 14.1086 3.23056 13.7731 3.28336 13.4413C2.75548 12.9831 2.2968 12.4507 1.9216 11.861H3.9128C4.10192 11.5658 4.2968 11.2738 4.6368 11.061C4.4376 10.245 4.31584 9.3464 4.29344 8.4H4.5088C4.57269 8.11986 4.67669 7.85041 4.8176 7.6H4.29872C4.33264 6.6504 4.4656 5.75136 4.6768 4.9392H7.6V6.36128C7.8829 6.40454 8.15465 6.50259 8.4 6.64992V4.9392H11.4712C11.5128 5.09872 11.5504 5.2624 11.5856 5.42832C11.8548 5.38709 12.1282 5.38079 12.399 5.4096C12.3681 5.25214 12.334 5.09531 12.2968 4.9392H14.5192C14.8519 5.64765 15.0662 6.40587 15.1536 7.18368C15.2464 7.99152 15.2482 8.93968 14.9542 9.86704C14.8589 10.2213 14.7366 10.5678 14.5885 10.9035C14.769 11.0934 14.9875 11.273 15.2072 11.4562C15.7267 10.3779 15.9976 9.19685 16 8C16 3.58176 12.4182 0 8 0H7.99152ZM8.4 0.90912C9.24288 1.05248 10.0483 1.74688 10.6829 2.89904C10.8874 3.2704 11.0701 3.68736 11.2282 4.13904H8.4V0.90912ZM7.6 0.94064V4.13904H4.92C5.07808 3.68736 5.2608 3.2704 5.46528 2.89904C6.0624 1.81456 6.81136 1.13632 7.6 0.9408V0.94064ZM5.7568 1.15712C5.38496 1.53344 5.0512 1.99232 4.76432 2.51312C4.49552 3.00112 4.26432 3.54784 4.0744 4.13904H1.9216C2.8072 2.74608 4.1576 1.67984 5.7568 1.15712ZM10.4624 1.2312C11.9661 1.77728 13.2336 2.81008 14.0784 4.13904H12.0728C11.8834 3.54784 11.6525 3.00112 11.3837 2.51312C11.1155 2.02592 10.8056 1.59328 10.4626 1.2312H10.4624ZM1.48112 4.9392H3.8504C3.6512 5.76512 3.52912 6.6608 3.49792 7.60016H0.81152C0.861214 6.67839 1.08853 5.7749 1.48096 4.93936L1.48112 4.9392ZM0.81152 8.4H3.49344C3.51408 9.33696 3.62464 10.2326 3.81248 11.0608H1.48096C1.08853 10.2253 0.861214 9.32177 0.81152 8.4Z"
+                        />
+                        <path
+                          d="M12.16 6.04303C10.8344 6.04303 9.76 7.11759 9.76 8.44303C9.76 9.76847 10.8344 10.843 12.16 10.843C13.4853 10.843 14.56 9.76847 14.56 8.44303C14.56 7.11759 13.4853 6.04303 12.16 6.04303ZM12.16 11.1987C9.5088 11.1987 8.32 12.3877 8.32 15.0387V15.3587C8.332 15.9891 8.61072 16.0077 9.2 15.9987H15.12C15.8712 15.9981 16.0051 15.9995 16 15.3587V15.0387C16 12.3877 14.8109 11.1987 12.16 11.1987ZM7.04 6.94239C5.95408 6.94239 5.07344 7.82303 5.07344 8.90911C5.07344 9.99503 5.95408 10.8753 7.04 10.8753C8.12592 10.8753 9.0064 9.99503 9.0064 8.90895C9.0064 7.82303 8.12592 6.94255 7.04 6.94255V6.94239ZM7.04 11.1665C4.868 11.1665 3.89376 12.1409 3.89376 14.3128V14.575C3.90368 15.0915 4.132 15.1067 4.61472 15.0993H7.6744C7.59632 13.8053 7.97856 12.4309 8.93056 11.5571C8.44864 11.2937 7.82256 11.1665 7.04 11.1665Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_102_218">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Users</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Users</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_102_228)">
+                        <path
+                          d="M16.0375 8.00001C16.0378 8.03858 16.0274 8.07648 16.0076 8.10956C15.9877 8.14263 15.9592 8.1696 15.925 8.18751L13.6975 9.52501C13.6641 9.54631 13.6256 9.55824 13.586 9.55956C13.5464 9.56088 13.5072 9.55154 13.4725 9.53251C13.4383 9.51275 13.4099 9.48432 13.3901 9.45009C13.3704 9.41586 13.36 9.37703 13.36 9.33751V8.44751H7.3925C8.025 9.43751 8.405 11.12 9.1325 11.12H9.8V10.45C9.79967 10.4207 9.80519 10.3916 9.81625 10.3645C9.82732 10.3373 9.84369 10.3127 9.86442 10.2919C9.88515 10.2712 9.90981 10.2548 9.93696 10.2438C9.9641 10.2327 9.99319 10.2272 10.0225 10.2275H12.25C12.2793 10.2272 12.3084 10.2327 12.3355 10.2438C12.3627 10.2548 12.3874 10.2712 12.4081 10.2919C12.4288 10.3127 12.4452 10.3373 12.4562 10.3645C12.4673 10.3916 12.4728 10.4207 12.4725 10.45V12.6775C12.4728 12.7068 12.4673 12.7359 12.4562 12.7631C12.4452 12.7902 12.4288 12.8149 12.4081 12.8356C12.3874 12.8563 12.3627 12.8727 12.3355 12.8838C12.3084 12.8948 12.2793 12.9003 12.25 12.9H10.0225C9.99319 12.9003 9.9641 12.8948 9.93696 12.8838C9.90981 12.8727 9.88515 12.8563 9.86442 12.8356C9.84369 12.8149 9.82732 12.7902 9.81625 12.7631C9.80519 12.7359 9.79967 12.7068 9.8 12.6775V12.01H9.1325C7.2475 12.01 7.105 8.44751 6.015 8.44751H3.5075C3.305 9.21251 2.61 9.78501 1.7825 9.78501C0.8 9.78251 0 8.98251 0 8.00001C0 7.01751 0.8 6.21751 1.7825 6.21751C2.61 6.21751 3.3075 6.78751 3.5075 7.55501C4.485 7.55501 4.605 7.79251 5.3725 6.04501C6.375 3.81751 6.825 3.99251 8.095 3.99251C8.20051 3.69533 8.40764 3.44498 8.67981 3.28569C8.95198 3.12639 9.27168 3.06839 9.58246 3.12192C9.89324 3.17546 10.1751 3.33708 10.3783 3.57826C10.5815 3.81944 10.6929 4.12465 10.6929 4.44001C10.6929 4.75537 10.5815 5.06059 10.3783 5.30176C10.1751 5.54294 9.89324 5.70457 9.58246 5.7581C9.27168 5.81163 8.95198 5.75363 8.67981 5.59433C8.40764 5.43504 8.20051 5.18469 8.095 4.88751H7.35C6.6225 4.88751 6.2425 6.57251 5.61 7.56001H13.3625V6.67001C13.3625 6.58751 13.405 6.51751 13.475 6.47501C13.545 6.43251 13.635 6.44001 13.6975 6.48251L15.925 7.82001C15.995 7.84751 16.0375 7.92251 16.0375 8.00001Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_102_228">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Dongle Serials</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Dongle Serials</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 8L10.6667 6.5L13.3333 5M8 8V14M8 8L5.33333 6.5L2.66667 5M13.3333 5V11L10.6667 12.5L8 14L5.33333 12.5L2.66667 11V5L5.33333 3.5L8 2L10.6667 3.5L13.3333 5Z"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.3333 8L10.6667 9.33333V12.5M2.66667 8L5.33333 9.33333V12.5M5.33333 3.5L8 5L10.6667 3.5"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Brands</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Brands</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_102_248)">
+                        <path
+                          d="M0 13.8335H16V16H0V13.8335ZM10.9438 0H5.0562V6.62176H1.37644L8 12.7902L14.6236 6.62176H10.9438V0Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_102_248">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Downloads</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Downloads</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.75 4.5C11.1642 4.5 11.5 4.16421 11.5 3.75C11.5 3.33579 11.1642 3 10.75 3C10.3358 3 10 3.33579 10 3.75C10 4.16421 10.3358 4.5 10.75 4.5Z"
+                      />
+                      <path
+                        d="M7.207 10H4.5V7.293L7.515 4.278C7.50518 4.18566 7.50017 4.09287 7.5 4C7.5 3.40666 7.67595 2.82664 8.00559 2.33329C8.33524 1.83994 8.80377 1.45543 9.35195 1.22836C9.90013 1.0013 10.5033 0.94189 11.0853 1.05765C11.6672 1.1734 12.2018 1.45912 12.6213 1.87868C13.0409 2.29824 13.3266 2.83279 13.4424 3.41473C13.5581 3.99667 13.4987 4.59987 13.2716 5.14805C13.0446 5.69623 12.6601 6.16477 12.1667 6.49441C11.6734 6.82405 11.0933 7 10.5 7C10.4071 6.99982 10.3143 6.99482 10.222 6.985L7.207 10ZM5.5 9H6.793L9.878 5.915L10.137 5.9625C10.2566 5.98622 10.3781 5.99877 10.5 6C10.9182 6.00515 11.3277 5.88068 11.6723 5.6437C12.0169 5.40673 12.2797 5.06886 12.4246 4.67653C12.5694 4.28419 12.5892 3.85662 12.4813 3.45256C12.3734 3.0485 12.143 2.68777 11.8218 2.41993C11.5006 2.15208 11.1043 1.99026 10.6875 1.95669C10.2706 1.92312 9.85354 2.01945 9.49361 2.23244C9.13369 2.44544 8.84854 2.76465 8.67734 3.14623C8.50615 3.52781 8.45729 3.95304 8.5375 4.3635L8.585 4.622L5.5 7.707V9ZM14 10H9.5V11H14V14H2V11H3V10H2C1.73486 10.0003 1.48066 10.1057 1.29319 10.2932C1.10571 10.4807 1.00026 10.7349 1 11V14C1.00026 14.2651 1.10571 14.5193 1.29319 14.7068C1.48066 14.8943 1.73486 14.9997 2 15H14C14.2651 14.9997 14.5193 14.8943 14.7068 14.7068C14.8943 14.5193 14.9997 14.2651 15 14V11C14.9997 10.7349 14.8943 10.4807 14.7068 10.2932C14.5193 10.1057 14.2651 10.0003 14 10Z"
+                      />
+                      <path
+                        d="M3.5 13C3.77614 13 4 12.7761 4 12.5C4 12.2239 3.77614 12 3.5 12C3.22386 12 3 12.2239 3 12.5C3 12.7761 3.22386 13 3.5 13Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Module</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Module</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 0C7.31 0 6.157 0.265 5.072 0.56C3.962 0.86 2.843 1.215 2.185 1.43C1.90989 1.52085 1.66599 1.68747 1.48132 1.9107C1.29664 2.13394 1.17869 2.40474 1.141 2.692C0.545002 7.169 1.928 10.487 3.606 12.682C4.31758 13.621 5.16603 14.4478 6.123 15.135C6.509 15.408 6.867 15.617 7.171 15.76C7.451 15.892 7.752 16 8 16C8.248 16 8.548 15.892 8.829 15.76C9.19549 15.5819 9.54609 15.3728 9.877 15.135C10.834 14.4479 11.6824 13.621 12.394 12.682C14.072 10.487 15.455 7.169 14.859 2.692C14.8214 2.4046 14.7035 2.13364 14.5188 1.91023C14.3341 1.68683 14.0902 1.52003 13.815 1.429C12.8598 1.11581 11.8972 0.825729 10.928 0.559C9.843 0.266 8.69 0 8 0ZM6.854 5.146L8 6.293L9.146 5.146C9.23989 5.05211 9.36723 4.99937 9.5 4.99937C9.63278 4.99937 9.76012 5.05211 9.854 5.146C9.94789 5.23989 10.0006 5.36722 10.0006 5.5C10.0006 5.63278 9.94789 5.76011 9.854 5.854L8.707 7L9.854 8.146C9.94789 8.23989 10.0006 8.36722 10.0006 8.5C10.0006 8.63278 9.94789 8.76011 9.854 8.854C9.76012 8.94789 9.63278 9.00063 9.5 9.00063C9.36723 9.00063 9.23989 8.94789 9.146 8.854L8 7.707L6.854 8.854C6.80751 8.90049 6.75232 8.93736 6.69159 8.96252C6.63085 8.98768 6.56575 9.00063 6.5 9.00063C6.43426 9.00063 6.36916 8.98768 6.30842 8.96252C6.24768 8.93736 6.19249 8.90049 6.146 8.854C6.09951 8.80751 6.06264 8.75232 6.03748 8.69158C6.01232 8.63084 5.99937 8.56574 5.99937 8.5C5.99937 8.43426 6.01232 8.36916 6.03748 8.30842C6.06264 8.24768 6.09951 8.19249 6.146 8.146L7.293 7L6.146 5.854C6.09951 5.80751 6.06264 5.75232 6.03748 5.69158C6.01232 5.63084 5.99937 5.56574 5.99937 5.5C5.99937 5.43426 6.01232 5.36916 6.03748 5.30842C6.06264 5.24768 6.09951 5.19249 6.146 5.146C6.19249 5.09951 6.24768 5.06264 6.30842 5.03748C6.36916 5.01232 6.43426 4.99937 6.5 4.99937C6.56575 4.99937 6.63085 5.01232 6.69159 5.03748C6.75232 5.06264 6.80751 5.09951 6.854 5.146Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Black List</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Black List</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.6667 11.3333H8.66667V8.66667H7.33333V11.3333H5.33333V12H1.33333V13.3333H5.33333V14H10.6667V13.3333H14.6667V12H10.6667V11.3333ZM10 8.66667H12C12.1768 8.66667 12.3464 8.59643 12.4714 8.4714C12.5964 8.34638 12.6667 8.17681 12.6667 8V3.33333C12.6667 3.15652 12.5964 2.98695 12.4714 2.86193C12.3464 2.7369 12.1768 2.66667 12 2.66667H8L7.33333 2H4C3.82319 2 3.65362 2.07024 3.52859 2.19526C3.40357 2.32029 3.33333 2.48986 3.33333 2.66667V8C3.33333 8.17681 3.40357 8.34638 3.52859 8.4714C3.65362 8.59643 3.82319 8.66667 4 8.66667H10Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>System</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >System</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.6667 6C12.254 6.00116 11.8519 6.12992 11.5153 6.36863C11.1787 6.60734 10.9242 6.9443 10.7867 7.33334H2C1.82319 7.33334 1.65362 7.40358 1.52859 7.5286C1.40357 7.65362 1.33333 7.82319 1.33333 8C1.33333 8.17682 1.40357 8.34638 1.52859 8.47141C1.65362 8.59643 1.82319 8.66667 2 8.66667H10.7867C10.909 9.01259 11.1241 9.3182 11.4084 9.55005C11.6928 9.78191 12.0354 9.93107 12.3989 9.98123C12.7624 10.0314 13.1326 9.98058 13.4691 9.83439C13.8057 9.68821 14.0955 9.45227 14.3069 9.1524C14.5183 8.85253 14.6432 8.50028 14.6678 8.1342C14.6924 7.76813 14.6158 7.40233 14.4465 7.07685C14.2771 6.75137 14.0215 6.47875 13.7076 6.28882C13.3937 6.09889 13.0336 5.99897 12.6667 6ZM2 4.66667H2.78667C2.9268 5.05277 3.18242 5.38636 3.51878 5.62211C3.85513 5.85786 4.25592 5.98432 4.66667 5.98432C5.07741 5.98432 5.4782 5.85786 5.81456 5.62211C6.15091 5.38636 6.40653 5.05277 6.54667 4.66667H14C14.1768 4.66667 14.3464 4.59643 14.4714 4.47141C14.5964 4.34638 14.6667 4.17681 14.6667 4C14.6667 3.82319 14.5964 3.65362 14.4714 3.5286C14.3464 3.40358 14.1768 3.33334 14 3.33334H6.54667C6.40653 2.94724 6.15091 2.61364 5.81456 2.3779C5.4782 2.14215 5.07741 2.01569 4.66667 2.01569C4.25592 2.01569 3.85513 2.14215 3.51878 2.3779C3.18242 2.61364 2.9268 2.94724 2.78667 3.33334H2C1.82319 3.33334 1.65362 3.40358 1.52859 3.5286C1.40357 3.65362 1.33333 3.82319 1.33333 4C1.33333 4.17681 1.40357 4.34638 1.52859 4.47141C1.65362 4.59643 1.82319 4.66667 2 4.66667ZM14 11.3333H9.21333C9.0732 10.9472 8.81758 10.6136 8.48122 10.3779C8.14486 10.1422 7.74408 10.0157 7.33333 10.0157C6.92259 10.0157 6.5218 10.1422 6.18544 10.3779C5.84908 10.6136 5.59347 10.9472 5.45333 11.3333H2C1.82319 11.3333 1.65362 11.4036 1.52859 11.5286C1.40357 11.6536 1.33333 11.8232 1.33333 12C1.33333 12.1768 1.40357 12.3464 1.52859 12.4714C1.65362 12.5964 1.82319 12.6667 2 12.6667H5.45333C5.59347 13.0528 5.84908 13.3864 6.18544 13.6221C6.5218 13.8579 6.92259 13.9843 7.33333 13.9843C7.74408 13.9843 8.14486 13.8579 8.48122 13.6221C8.81758 13.3864 9.0732 13.0528 9.21333 12.6667H14C14.1768 12.6667 14.3464 12.5964 14.4714 12.4714C14.5964 12.3464 14.6667 12.1768 14.6667 12C14.6667 11.8232 14.5964 11.6536 14.4714 11.5286C14.3464 11.4036 14.1768 11.3333 14 11.3333Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Options</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Options</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.457 12.25L6.5855 10.1215L5.8785 9.41449L3.75 11.543L3.3535 11.1465C3.25974 11.0528 3.13258 11.0001 3 11.0001C2.86742 11.0001 2.74026 11.0528 2.6465 11.1465L0.6465 13.1465C0.552765 13.2403 0.500107 13.3674 0.500107 13.5C0.500107 13.6326 0.552765 13.7597 0.6465 13.8535L2.1465 15.3535C2.24026 15.4472 2.36742 15.4999 2.5 15.4999C2.63258 15.4999 2.75974 15.4472 2.8535 15.3535L4.8535 13.3535C4.94724 13.2597 4.99989 13.1326 4.99989 13C4.99989 12.8674 4.94724 12.7403 4.8535 12.6465L4.457 12.25ZM2.5 14.293L1.707 13.5L3 12.207L3.793 13L2.5 14.293Z"
+                      />
+                      <path
+                        d="M12 15C11.2046 14.9991 10.4421 14.6827 9.8797 14.1203C9.31729 13.5579 9.00093 12.7954 9 12C9.00022 11.7386 9.03554 11.4785 9.105 11.2265L4.774 6.89499C4.52186 6.96445 4.26153 6.99976 4 6.99999C3.51121 7.00194 3.02941 6.88396 2.59684 6.65638C2.16426 6.42879 1.79412 6.09857 1.51887 5.69465C1.24362 5.29073 1.07166 4.82545 1.01807 4.33961C0.964481 3.85376 1.0309 3.36219 1.2115 2.90799L1.4905 2.19749L3.1465 3.85349C3.24166 3.94436 3.36817 3.99506 3.49975 3.99506C3.63133 3.99506 3.75784 3.94436 3.853 3.85349C3.89947 3.8071 3.93634 3.75199 3.9615 3.69134C3.98665 3.63068 3.9996 3.56566 3.9996 3.49999C3.9996 3.43432 3.98665 3.3693 3.9615 3.30864C3.93634 3.24799 3.89947 3.19288 3.853 3.14649L2.1975 1.48949L2.909 1.21099C3.36319 1.03071 3.85467 0.964561 4.34036 1.01833C4.82606 1.0721 5.29116 1.24415 5.69492 1.51941C6.09868 1.79467 6.42879 2.16475 6.65631 2.59721C6.88384 3.02967 7.00185 3.51133 7 3.99999C6.99978 4.26136 6.96446 4.52152 6.895 4.77349L11.2265 9.10499C11.4785 9.03562 11.7386 9.00031 12 8.99999C12.4888 8.99804 12.9706 9.11602 13.4032 9.34361C13.8357 9.57119 14.2059 9.90141 14.4811 10.3053C14.7564 10.7093 14.9283 11.1745 14.9819 11.6604C15.0355 12.1462 14.9691 12.6378 14.7885 13.092L14.51 13.8025L12.8535 12.1465C12.7583 12.0556 12.6318 12.0049 12.5002 12.0049C12.3687 12.0049 12.2422 12.0556 12.147 12.1465C12.1005 12.1929 12.0636 12.2479 12.0384 12.3086C12.0132 12.3692 12.0002 12.4342 12.0001 12.4999C12.0001 12.5656 12.013 12.6306 12.0381 12.6913C12.0632 12.7519 12.1001 12.8071 12.1465 12.8535L13.803 14.51L13.092 14.789C12.7445 14.9272 12.374 14.9988 12 15ZM5.031 5.73799L10.2615 10.9685L10.142 11.2735C10.0249 11.5662 9.97912 11.8826 10.0085 12.1966C10.0378 12.5105 10.1414 12.8129 10.3107 13.0789C10.48 13.3449 10.7102 13.5668 10.9822 13.7263C11.2542 13.8857 11.5602 13.9782 11.875 13.996L11.4395 13.561C11.3002 13.4217 11.1897 13.2563 11.1143 13.0743C11.0389 12.8923 11.0001 12.6972 11.0001 12.5002C11.0001 12.3032 11.0389 12.1082 11.1143 11.9262C11.1897 11.7442 11.3002 11.5788 11.4395 11.4395C11.7253 11.1666 12.1052 11.0144 12.5002 11.0144C12.8953 11.0144 13.2752 11.1666 13.561 11.4395L13.996 11.875C13.9781 11.5602 13.8856 11.2541 13.7261 10.9821C13.5665 10.7102 13.3446 10.48 13.0786 10.3107C12.8126 10.1414 12.5101 10.0378 12.1962 10.0085C11.8822 9.97914 11.5658 10.0249 11.273 10.142L10.9685 10.2615L5.7385 5.03149L5.8585 4.72649C5.97561 4.43371 6.02138 4.11726 5.99202 3.8033C5.96266 3.48933 5.85902 3.18686 5.68965 2.92086C5.52029 2.65487 5.29006 2.43299 5.018 2.27357C4.74593 2.11414 4.43984 2.02174 4.125 2.00399L4.56 2.43899C4.69931 2.57828 4.80983 2.74365 4.88522 2.92566C4.96062 3.10766 4.99943 3.30274 4.99943 3.49974C4.99943 3.69674 4.96062 3.89182 4.88522 4.07382C4.80983 4.25583 4.69931 4.4212 4.56 4.56049C4.27425 4.83334 3.89435 4.98559 3.49925 4.98559C3.10415 4.98559 2.72425 4.83334 2.4385 4.56049L2.0035 4.12499C2.02132 4.43978 2.11378 4.74582 2.27324 5.01782C2.4327 5.28982 2.65458 5.51999 2.92056 5.6893C3.18655 5.85861 3.48899 5.96221 3.80292 5.99154C4.11685 6.02087 4.43326 5.9751 4.726 5.85799L5.031 5.73799Z"
+                      />
+                      <path
+                        d="M14.5615 1.42497C14.2757 1.15212 13.8958 0.999878 13.5007 0.999878C13.1057 0.999878 12.7257 1.15212 12.44 1.42497L8.7 5.16498L9.407 5.87197L13.147 2.13197C13.2422 2.04107 13.3688 1.99036 13.5005 1.99036C13.6322 1.99036 13.7588 2.04107 13.854 2.13197C13.9475 2.22587 14 2.35297 14 2.48548C14 2.61798 13.9475 2.74508 13.854 2.83897L10.114 6.57897L10.821 7.28648L14.561 3.54647C14.842 3.26497 14.9998 2.88347 14.9998 2.48572C14.9998 2.08798 14.842 1.70648 14.561 1.42497H14.5615Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Tools</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Tools</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_102_315)">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.6667 6.00004C10.6667 6.70728 10.3857 7.38556 9.88562 7.88566C9.38552 8.38576 8.70725 8.66671 8 8.66671C7.29276 8.66671 6.61448 8.38576 6.11438 7.88566C5.61429 7.38556 5.33334 6.70728 5.33334 6.00004C5.33334 5.2928 5.61429 4.61452 6.11438 4.11442C6.61448 3.61433 7.29276 3.33337 8 3.33337C8.70725 3.33337 9.38552 3.61433 9.88562 4.11442C10.3857 4.61452 10.6667 5.2928 10.6667 6.00004ZM9.33334 6.00004C9.33334 6.35366 9.19286 6.6928 8.94281 6.94285C8.69276 7.1929 8.35362 7.33337 8 7.33337C7.64638 7.33337 7.30724 7.1929 7.05719 6.94285C6.80715 6.6928 6.66667 6.35366 6.66667 6.00004C6.66667 5.64642 6.80715 5.30728 7.05719 5.05723C7.30724 4.80718 7.64638 4.66671 8 4.66671C8.35362 4.66671 8.69276 4.80718 8.94281 5.05723C9.19286 5.30728 9.33334 5.64642 9.33334 6.00004Z"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8 0.666687C3.95 0.666687 0.666668 3.95002 0.666668 8.00002C0.666668 12.05 3.95 15.3334 8 15.3334C12.05 15.3334 15.3333 12.05 15.3333 8.00002C15.3333 3.95002 12.05 0.666687 8 0.666687ZM2 8.00002C2 9.39335 2.47533 10.676 3.272 11.6947C3.83149 10.96 4.55327 10.3645 5.38096 9.9549C6.20865 9.54527 7.11983 9.33255 8.04333 9.33335C8.95489 9.33249 9.85461 9.5397 10.674 9.93921C11.4933 10.3387 12.2106 10.92 12.7713 11.6387C13.349 10.8811 13.7379 9.99683 13.9059 9.05908C14.074 8.12133 14.0163 7.15704 13.7377 6.24601C13.459 5.33498 12.9675 4.50339 12.3037 3.82005C11.6398 3.1367 10.8228 2.62126 9.92026 2.31636C9.01768 2.01146 8.05547 1.92587 7.11324 2.06667C6.17102 2.20747 5.27586 2.57061 4.50185 3.12606C3.72783 3.6815 3.09721 4.41327 2.66215 5.26082C2.2271 6.10837 2.00012 7.04733 2 8.00002ZM8 14C6.62263 14.0021 5.28685 13.5283 4.21867 12.6587C4.64862 12.0432 5.22089 11.5406 5.8868 11.1938C6.5527 10.847 7.29253 10.6662 8.04333 10.6667C8.78478 10.6661 9.51566 10.8424 10.1753 11.181C10.8349 11.5195 11.4042 12.0106 11.836 12.6134C10.7595 13.5112 9.40172 14.002 8 14Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_102_315">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>Profile</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar__menu-link">
+              <div class="d-flex align-items-center">
+                <div>
+                  <a
+                    class="svg__icon d-flex align-items-center justify-content-center"
+                    href="#"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 1.33333C4.33333 1.33333 1.33333 4.33333 1.33333 7.99999C1.33333 11.6667 4.33333 14.6667 8 14.6667C11.6667 14.6667 14.6667 11.6667 14.6667 7.99999C14.6667 4.33333 11.6667 1.33333 8 1.33333ZM7.33333 9.33333H4L7.33333 2.66666V9.33333ZM8.66667 13.3333V6.66666H12L8.66667 13.3333Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div
+                  id="sidebar__accordion-option"
+                  class="flex-grow-1 sidebar__option"
+                >
+                  <div
+                    style="height: 50px"
+                    class="d-flex align-items-center justify-content-between pe-3 sidebar__option-inner"
+                  >
+                    <span>API Manager</span>
+                    <img src="./public/sidebar-icons/play-arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__accordion-details bg-light">
+                <ul class="mb-0 list-unstyled">
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >API Manager</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page2</a
+                    >
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <a
+                      class="text-decoration-none d-flex align-items-center"
+                      href="#"
+                      >Page3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main__interface">
+        <div class="navbar">
+          <div class="container px-4 navbar-main">
+            <div class="d-flex align-items-center gap-5 ms-5">
+              <img
+                class="pointer"
+                id="hamburger"
+                src="./public/navbar-icons/game-icons_hamburger-menu.svg"
+                alt="hamburger"
+              />
+              <div class="balance">
+                <p class="balance text-light mb-0">
+                  Balance: <span>167673444454</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="user__info d-flex align-items-center gap-3 pointer">
+              <img src="./public/navbar-icons/avatar.svg" alt="" />
+              <p class="mb-0 text-light">Ahmed Shuaib</p>
+              <img src="./public/navbar-icons/ci_play-arrow.svg" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="container"
+            style="border-top: 0.5px solid rgba(255, 255, 255, 0.3)"
+          >
+            <div
+              class="page__title text-light d-flex align-items-center justify-content-between ms-5 flex-wrap gap-1"
+            >
+              <div class="d-flex align-items-center gap-3">
+                <img
+                  class="ms-4"
+                  src="./public/icons/material-symbols_real-estate-agent-sharp-bw.svg"
+                  alt=""
+                />
+                <h4 class="mb-0">Agents</h4>
+              </div>
+
+              <button
+                class="add__agent-btn d-flex align-items-center justify-content-center gap-2"
+              >
+                <img
+                  src="./public/icons/ant-design_plus-circle-filled.svg"
+                  alt=""
+                />
+                New Agent
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="add__agent-popup">
+          <div class="agent__popup-wrapper">
+            <div
+              class="d-flex align-items-center justify-content-center gap-2 py-2 mb-4"
+              style="border-bottom: 1px solid #001c62"
+            >
+              <svg
+                class="flex-shrink-0"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="transform: scale(1.8)"
+              >
+                <path
+                  d="M13 2.125C6.71836 2.125 1.625 7.21836 1.625 13.5C1.625 19.7816 6.71836 24.875 13 24.875C19.2816 24.875 24.375 19.7816 24.375 13.5C24.375 7.21836 19.2816 2.125 13 2.125ZM17.875 14.1094C17.875 14.2211 17.7836 14.3125 17.6719 14.3125H13.8125V18.1719C13.8125 18.2836 13.7211 18.375 13.6094 18.375H12.3906C12.2789 18.375 12.1875 18.2836 12.1875 18.1719V14.125H8.32812C8.21641 14.3125 8.125 14.2211 8.125 14.1094V12.8906C8.125 12.7789 8.21641 12.6875 8.32812 12.6875H12.1875V8.82812C12.1875 8.71641 12.2789 8.625 12.3906 8.625H13.6094C13.7211 8.625 13.8125 8.71641 13.8125 8.82812V12.6875H17.6719C17.7836 12.6875 17.875 12.7789 17.875 12.8906V14.1094Z"
+                  fill="#001C62"
+                />
+              </svg>
+
+              <h3 style="font-size: 32px !important" class="mb-0">New Agent</h3>
+            </div>
+
+            <div class="popup__form">
+              <div class="popup__input-group d-flex align-items-center gap-5">
+                <div class="popup__form-title me-5 text-start">
+                  <label style="width: 30px" for="name">Name</label>
+                </div>
+                <div class="popup__form-field flex-grow-1">
+                  <input id="name" type="text" placeholder="Name" />
+                </div>
+              </div>
+
+              <div
+                class="popup__input-group d-flex align-items-center gap-5 mt-4"
+              >
+                <div class="popup__form-title me-5 text-start">
+                  <label style="width: 30px" for="phone">Phone</label>
+                </div>
+                <div class="popup__form-field flex-grow-1">
+                  <input id="phone" type="text" placeholder="Phone" />
+                </div>
+              </div>
+
+              <div
+                class="popup__input-group d-flex align-items-center gap-5 mt-4"
+              >
+                <div class="popup__form-title me-5 text-start">
+                  <label style="width: 30px" for="email">Email</label>
+                </div>
+                <div class="popup__form-field flex-grow-1">
+                  <input id="email" type="text" placeholder="Email" />
+                </div>
+              </div>
+
+              <div
+                class="popup__input-group d-flex align-items-center gap-5 mt-4"
+              >
+                <div class="popup__form-title me-5 text-start">
+                  <label style="width: 30px" for="email">Distributor</label>
+                </div>
+                <div class="d-flex w-100 align-items-center gap-2 flex-wrap">
+                  <input
+                    style="
+                      height: 30px !important;
+                      width: 30px !important;
+                      accent-color: #3e82f1 !important;
+                    "
+                    class="flex-shrink-0"
+                    id="email"
+                    type="checkbox"
+                    placeholder="Email"
+                  />
+                  <button class="ms-auto add-new-btn flex-shrink-0s">
+                    Add New Field
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="popup__input-group d-flex align-items-center gap-5 mt-4"
+              >
+                <div class="popup__form-title me-5 text-start">
+                  <label style="width: 30px" for="email">Distributor</label>
+                </div>
+                <div class="flex-grow-1 text-start">
+                  <select class="popup__select" id="">
+                    <option value="">Active</option>
+                    <option value="">Disable</option>
+                    <option value="">op</option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="popup__input-group d-flex align-items-center justify-content-between gap-2 mt-4 flex-wrap"
+              >
+                <button class="popup__add-btn">Add Agent</button>
+                <button class="popup__cancel-btn">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- main page design start -->
+        <div class="container">
+          <div
+            class="tfm__search-wrapper d-flex align-items-center justify-content-between py-4 ps-4 flex-wrap gap-3"
+          >
+            <div class="d-flex align-items-center gap-2 ps-5">
+              <span>Show</span>
+              <form class="show-entries-form">
+                <input type="text" placeholder="12" />
+                <img
+                  src="./public/icons/heroicons_arrows-up-down-20-solid.svg"
+                  alt=""
+                />
+              </form>
+              <span>Entries</span>
+            </div>
+
+            <div>
+              <form class="page-search">
+                <img src="./public/icons/bx_search-alt-2.svg" alt="" />
+                <input type="text" placeholder="Search" />
+              </form>
+            </div>
+          </div>
+
+          <div class="table__wrapper">
+            <table class="table p-4 table-striped border-0" id="agent_table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Md Name</td>
+                  <td>example@example.com</td>
+                  <td>+8801712121211</td>
+                  <td><span class="distributor__text">Distributor</span></td>
+                  <td><span class="active__text">Active</span></td>
+                  <td>12/12/2023</td>
+                  <td>
+                    <div class="d-flex align-items-center tbl__btn-group">
+                      <button
+                        class="tbl__view-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/carbon_view-filled.svg"
+                          alt=""
+                        />
+                        View
+                      </button>
+                      <button
+                        class="tbl__icon-btn border-0 d-flex align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/bxs_message-square-edit.svg"
+                          alt=""
+                        />
+                        Edit
+                      </button>
+                      <button
+                        class="tbl__delete-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/ant-design_delete-filled.svg"
+                          alt=""
+                        />
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Md Name</td>
+                  <td>example@example.com</td>
+                  <td>+8801712121211</td>
+                  <td><span class="reseller__text">Reseller</span></td>
+                  <td><span class="inactive__text">Inactive</span></td>
+                  <td>12/12/2023</td>
+                  <td>
+                    <div class="d-flex align-items-center tbl__btn-group">
+                      <button
+                        class="tbl__view-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/carbon_view-filled.svg"
+                          alt=""
+                        />
+                        View
+                      </button>
+                      <button
+                        class="tbl__icon-btn border-0 d-flex align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/bxs_message-square-edit.svg"
+                          alt=""
+                        />
+                        Edit
+                      </button>
+                      <button
+                        class="tbl__delete-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/ant-design_delete-filled.svg"
+                          alt=""
+                        />
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Md Name</td>
+                  <td>example@example.com</td>
+                  <td>+8801712121211</td>
+                  <td><span class="distributor__text">Distributor</span></td>
+                  <td><span class="active__text">Active</span></td>
+                  <td>12/12/2023</td>
+                  <td>
+                    <div class="d-flex align-items-center tbl__btn-group">
+                      <button
+                        class="tbl__view-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/carbon_view-filled.svg"
+                          alt=""
+                        />
+                        View
+                      </button>
+                      <button
+                        class="tbl__icon-btn border-0 d-flex align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/bxs_message-square-edit.svg"
+                          alt=""
+                        />
+                        Edit
+                      </button>
+                      <button
+                        class="tbl__delete-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/ant-design_delete-filled.svg"
+                          alt=""
+                        />
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Md Name</td>
+                  <td>example@example.com</td>
+                  <td>+8801712121211</td>
+                  <td><span class="reseller__text">Reseller</span></td>
+                  <td><span class="inactive__text">Inactive</span></td>
+                  <td>12/12/2023</td>
+                  <td>
+                    <div class="d-flex align-items-center tbl__btn-group">
+                      <button
+                        class="tbl__view-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/carbon_view-filled.svg"
+                          alt=""
+                        />
+                        View
+                      </button>
+                      <button
+                        class="tbl__icon-btn border-0 d-flex align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/bxs_message-square-edit.svg"
+                          alt=""
+                        />
+                        Edit
+                      </button>
+                      <button
+                        class="tbl__delete-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/ant-design_delete-filled.svg"
+                          alt=""
+                        />
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Md Name</td>
+                  <td>example@example.com</td>
+                  <td>+8801712121211</td>
+                  <td><span class="distributor__text">Distributor</span></td>
+                  <td><span class="active__text">Active</span></td>
+                  <td>12/12/2023</td>
+                  <td>
+                    <div class="d-flex align-items-center tbl__btn-group">
+                      <button
+                        class="tbl__view-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/carbon_view-filled.svg"
+                          alt=""
+                        />
+                        View
+                      </button>
+                      <button
+                        class="tbl__icon-btn border-0 d-flex align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/bxs_message-square-edit.svg"
+                          alt=""
+                        />
+                        Edit
+                      </button>
+                      <button
+                        class="tbl__delete-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/ant-design_delete-filled.svg"
+                          alt=""
+                        />
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Md Name</td>
+                  <td>example@example.com</td>
+                  <td>+8801712121211</td>
+                  <td><span class="reseller__text">Reseller</span></td>
+                  <td><span class="inactive__text">Inactive</span></td>
+                  <td>12/12/2023</td>
+                  <td>
+                    <div class="d-flex align-items-center tbl__btn-group">
+                      <button
+                        class="tbl__view-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/carbon_view-filled.svg"
+                          alt=""
+                        />
+                        View
+                      </button>
+                      <button
+                        class="tbl__icon-btn border-0 d-flex align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/bxs_message-square-edit.svg"
+                          alt=""
+                        />
+                        Edit
+                      </button>
+                      <button
+                        class="tbl__delete-btn d-flex border-0 align-items-center gap-2"
+                      >
+                        <img
+                          src="./public/icons/ant-design_delete-filled.svg"
+                          alt=""
+                        />
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- main page design end -->
+        <div class="container">
+          <footer>
+            <p class="copyright mb-0">
+              Copyright @2014-2019 TFMTOOL, All rights reserved.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- jquery table script -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $('#agent_table').DataTable({
+          searching: false,
+          lengthChange: false,
+          responsive: true,
+        });
+      });
+    </script>
+  </body>
+</html>
